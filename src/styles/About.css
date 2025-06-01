@@ -1,0 +1,187 @@
+.about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 80vh;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    gap: var(--spacing-xl);
+    animation: fadeIn var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at top right,
+        rgba(255, 106, 0, 0.1),
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+.head-six {
+    color: var(--secondary-color);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: var(--spacing-xs);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: inline-block;
+}
+
+.head-six::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--secondary-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--transition-normal);
+}
+
+.head-six:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.logo-name {
+    font-size: 4rem;
+    font-weight: 800;
+    font-family: var(--font-primary);
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+    margin: var(--spacing-sm) 0;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.description {
+    width: 45%;
+    max-width: 600px;
+    background: var(--background-dark);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--neu-shadow-light), var(--neu-shadow-dark);
+    position: relative;
+    z-index: 1;
+}
+
+.description::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0)
+    );
+    border-radius: inherit;
+    z-index: -1;
+}
+
+.desc-content {
+    font-size: 1.25rem;
+    margin-top: var(--spacing-md);
+    color: var(--text-lighter);
+    line-height: 1.8;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    position: relative;
+    z-index: 1;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(var(--shadow-lg));
+    transition: all var(--transition-normal);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--neu-shadow-light), var(--neu-shadow-dark);
+    background: var(--background-dark);
+    padding: var(--spacing-md);
+}
+
+.logo img:hover {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: var(--neu-shadow-pressed);
+}
+
+hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), transparent);
+    margin: var(--spacing-md) 0;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--spacing-lg) var(--spacing-md);
+        min-height: auto;
+    }
+
+    .description {
+        width: 90%;
+        max-width: 600px;
+        padding: var(--spacing-lg);
+    }
+
+    .logo-name {
+        font-size: 3rem;
+    }
+
+    .desc-content {
+        font-size: 1.1rem;
+    }
+
+    .head-six::after {
+        left: 50%;
+        transform: translateX(-50%) scaleX(0);
+        width: 50%;
+    }
+
+    .head-six:hover::after {
+        transform: translateX(-50%) scaleX(1);
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-name {
+        font-size: 2.5rem;
+    }
+
+    .desc-content {
+        font-size: 1rem;
+    }
+
+    .description {
+        padding: var(--spacing-md);
+    }
+
+    .logo img {
+        padding: var(--spacing-sm);
+    }
+}

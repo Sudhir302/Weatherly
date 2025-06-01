@@ -1,0 +1,15 @@
+.visit{
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(9, 110, 233);
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
