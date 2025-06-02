@@ -17,7 +17,7 @@ function Weather(){
     const submitHandler = async(e)=>{
         e.preventDefault();
         try {
-            let res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city},NP&appid=4cd115f870e734d792bf5475f251fd21`)
+            let res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city},IN&appid=4cd115f870e734d792bf5475f251fd21`)
             console.log(res)
             setTemp(Math.floor(res.data.main.temp)-273+"°C");
             let imgDetails = res.data.weather[0].main

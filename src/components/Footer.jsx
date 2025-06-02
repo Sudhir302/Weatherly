@@ -10,9 +10,9 @@ function Footer(){
             </div>
             <div className="social">
                 <a href="" className="social-media"><i className="fa-brands fa-x-twitter"></i></a>
-                <a href="" className="social-media"><i className="fa-brands fa-instagram"></i></a>
-                <a href="" className="social-media"><i className="fa-brands fa-github"></i></a>
-                <a href="" className="social-media"><i className="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/sudhirchaudhary03/" className="social-media"><i className="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/Sudhir302" className="social-media"><i className="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sudhir-chaudhary-1b968a2bb/" className="social-media"><i className="fa-brands fa-linkedin-in"></i></a>
             </div>
         </div>
     )
